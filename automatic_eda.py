@@ -4,5 +4,8 @@ from pandas_profiling import ProfileReport
 
 df = pd.read_csv("./data/fraude_mobile_phone_ech_train_2021.csv")
 
-profile = df.profile_report(title="Scoring", minimal=True)
-profile.to_file("./exports/output.html")
+#profile = df.profile_report(title="Scoring", minimal=True)
+#profile.to_file("./exports/output.html")
+
+full_profile = df.profile_report(title="Scoring")
+full_profile.to_file("./exports/full_output.html")
